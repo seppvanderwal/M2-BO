@@ -1,6 +1,5 @@
 # M2-BO
 # Test Sepp
-# Test pieter
 # afspraken
 ## hoe bereiken we elkaar? 
 ### we bereiken elkaar via discord,teams of whatsapp
