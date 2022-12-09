@@ -33,9 +33,12 @@ nav{
   
 nav a{
     float: left;
-    color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    color: #f2f2f2;
+    padding-left: 122px;
+    padding-right: 122px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-decoration: none;
     font-size: 17px;
 }
