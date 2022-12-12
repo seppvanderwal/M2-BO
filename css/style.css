@@ -29,14 +29,17 @@ p{
 nav{
     overflow: hidden;
     background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
   
 nav a{
     float: left;
     text-align: center;
     color: #f2f2f2;
-    padding-left: 122px;
-    padding-right: 122px;
+    padding-left: 120px;
+    padding-right: 120px;
     padding-top: 20px;
     padding-bottom: 20px;
     text-decoration: none;
@@ -52,11 +55,17 @@ nav a:hover{
     background-color: #04AA6D;
     color: white;
 }
-.sticky {
+
+
+
+footer {
+    padding: 10px;
+    background-color: blue;
+    color: #f2f2f2;
+    background-color: #333;
     position: fixed;
-    top: 0;
+    left: 0;
+    bottom: 0;
     width: 100%;
-}
-.sticky + .content {
-    padding-top: 60px;
+    
 }
