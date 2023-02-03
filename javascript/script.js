@@ -1,18 +1,20 @@
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  let canvas = document.getElementById('canvas');
+  let ctx = canvas.getContext('2d');
 
-  
+
+var score = 0;
+var scoreDisplayer = document.getElementById("score");
   var moles = [
-    {x: 50, y: 50, w: 50, h: 50, visible: false},
-    {x: 50, y: 100, w: 50, h: 50, visible: false},
-    {x: 50, y: 150, w: 50, h: 50, visible: false},
-    {x: 100, y: 50, w: 50, h: 50, visible: false},
-    {x: 100, y: 100, w: 50, h: 50, visible: false},
-    {x: 100, y: 150, w: 50, h: 50, visible: false},
-    {x: 150, y: 50, w: 50, h: 50, visible: false},
-    {x: 150, y: 100, w: 50, h: 50, visible: false},
-    {x: 150, y: 150, w: 50, h: 50, visible: false}
-  ];
+    {x: 0, y: 0, w: 100, h: 100, visible: false},
+    {x: 0, y: 200, w: 100, h: 100, visible: false},
+    {x: 0, y: 400, w: 100, h: 100, visible: false},
+    {x: 200, y: 0, w: 100, h: 100, visible: false},
+    {x: 200, y: 200, w: 100, h: 100, visible: false},
+    {x: 200, y: 400, w: 100, h: 100, visible: false},
+    {x: 400, y: 0, w: 100, h: 100, visible: false},
+    {x: 400, y: 200, w: 100, h: 100, visible: false},
+    {x: 400, y: 400, w: 100, h: 100, visible: false}
+  ]
 
  
   function drawMoles() {
@@ -20,21 +22,27 @@
     for (var i = 0; i < moles.length; i++) {
       var mole = moles[i];
       if (mole.visible) {
-        ctx.fillStyle = '#ff0000';
-        ctx.fillRect(mole.x, mole.y, mole.w, mole.h);
+         ctx.fillStyle = '#ff0000';
+         ctx.fillRect(mole.x, mole.y, mole.w, mole.h);
       }
     }
   }
 
   function handleClick(event) {
+
+    console.log("click");
+
     var x = event.clientX - canvas.offsetLeft;
     var y = event.clientY - canvas.offsetTop;
 
     for (var i = 0; i < moles.length; i++) {
-      var mole = moles[i];
+      var mole = moles[i];      
       if (x > mole.x && x < mole.x + mole.w && y > mole.y && y < mole.y + mole.h && mole.visible) {
         mole.visible = false;
+        score += 1;
+        scoreDisplayer.innerHTML = "Score: " + score;
         drawMoles();
+        break;
       }
     }
   }
@@ -49,3 +57,4 @@
     }, Math.random() * 2000 + 1000);
   }
   setInterval(showMole, 1000);
+

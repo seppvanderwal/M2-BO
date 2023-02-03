@@ -9,6 +9,7 @@ body{
     font-size: 20px;
     font-family: sans-serif;
     color: white;
+    text-align: center;
 }
 
 
@@ -31,6 +32,9 @@ img:hover{
 }
 p{
     margin-bottom: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+    
 }
 
   
@@ -66,10 +70,18 @@ nav a:hover{
     background-color: #04AA6D;
     color: white;
 }
-.canvas{
+    .game {
     display: flex;
+    margin-top: 10px;
+    margin-left: auto;
+    justify-content: center;
+    align-items: center;
 }
 
+    button {
+       width: 50px; 
+       height: 25px;
+    }
 
 footer {
     border-top: 2px solid black ;
